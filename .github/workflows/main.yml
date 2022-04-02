@@ -15,15 +15,5 @@ jobs:
         ports:
           - "5555:5555"
     steps:
-      - uses: actions/checkout@v2
-      - name: set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11.0.4'
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2.0.7
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       - name: android-emulator
         run: adb connect android-emulator:5555 && adb wait-for-device
