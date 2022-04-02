@@ -8,7 +8,7 @@ on:
 
 jobs:
   android-test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     services:
       service-name-1:
         image: us-docker.pkg.dev/android-emulator-268719/images/30-google-x64:30.1.2
